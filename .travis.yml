@@ -1,11 +1,11 @@
 os:
-    - linux
-    - osx
-  
-  language: cpp
-  sudo: required
-  
-  script: 
-    - git clone https://github.com/thomasgeissl/ofTravis.git
-    - ./ofTravis/common/export.sh
-    - echo $OF_VERSION
+  - linux
+  - osx
+
+language: cpp
+sudo: required
+
+script:
+  - git clone https://github.com/thomasgeissl/ofTravis.git
+  - ./ofTravis/common/export.sh
+  - echo $OF_VERSION
