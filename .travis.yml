@@ -8,4 +8,4 @@ sudo: required
 script:
   - git clone https://github.com/thomasgeissl/ofTravis.git
   - source ./ofTravis/common/export.sh
-  - echo $OF_VERSION
+  - source ./ofTravis/${TRAVIS_OS_NAME}/install_oF.sh
