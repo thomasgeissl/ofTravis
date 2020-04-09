@@ -9,3 +9,4 @@ script:
   - git clone https://github.com/thomasgeissl/ofTravis.git
   - source ./ofTravis/common/export.sh
   - source ./ofTravis/${TRAVIS_OS_NAME}/install_oF.sh
+  - source ./ofTravis/common/compile_app.sh
