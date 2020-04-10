@@ -21,3 +21,5 @@ If you want to deployment to github releases or sign and notarise your app, then
 * CERTIFICATE_OSX_P12: your apple developer p12 certificate, base64 encoded
 * CERTIFICATE_OSX_P12_PASSWORD: the corresponding password
 * CERTIFICATE_OSX_P12_NAME: the name of the certificate, can be found on apple developer account page
+
+This repo also includes a travis config demonstrating how to use the scripts.
