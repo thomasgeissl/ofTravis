@@ -15,7 +15,6 @@ script:
 #   - source ./ofTravis/common/package_addon.sh
 
 before_deploy:
-  - if [ "$TRAVIS_OS_NAME" = osx ]; then chmod +x ./ofTravis/osx/add_certificate.sh; fi
   - if [ "$TRAVIS_OS_NAME" = osx ]; then source ./ofTravis/osx/add_certificate.sh; fi
 
 deploy:
