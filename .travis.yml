@@ -14,6 +14,10 @@ script:
 #   - source ./ofTravis/common/compile_addon_examples.sh
 #   - source ./ofTravis/common/package_addon.sh
 
+before_deploy:
+  - if [ "$TRAVIS_OS_NAME" = osx ]; then chmod +x ./ofTravis/osx/add_certificate.sh; fi
+  - if [ "$TRAVIS_OS_NAME" = osx ]; then source ./ofTravis/osx/add_certificate.sh; fi
+
 deploy:
   provider: releases
   api_key: $GH_TOKEN
