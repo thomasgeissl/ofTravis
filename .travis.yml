@@ -1,6 +1,7 @@
 os:
   - linux
   - osx
+  - windows
 
 language: cpp
 sudo: required
@@ -8,6 +9,7 @@ sudo: required
 script:
   - git clone https://github.com/thomasgeissl/ofTravis.git
   - source ./ofTravis/common/export.sh
+  - if [ "$TRAVIS_OS_NAME" = windows ]; then source ./ofTravis/windows/install_msys2.sh; fi
   - source ./ofTravis/${TRAVIS_OS_NAME}/install_oF.sh
 #   - source ./ofTravis/common/compile_app.sh
 #   - source ./ofTravis/common/compile_addon_examples.sh
