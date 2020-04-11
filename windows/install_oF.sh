@@ -5,4 +5,4 @@ curl -O https://openframeworks.cc/versions/v${OF_VERSION}/of_v${OF_VERSION}_${OF
 unzip -a -qq of_v${OF_VERSION}_${OF_PLATFORM}_release.zip
 rm of_v${OF_VERSION}_${OF_PLATFORM}_release.zip
 mv of_v${OF_VERSION}_${OF_PLATFORM}_release ${HOME}/oF
-${HOME}/oF/scripts/${OF_PLATFORM}/install_dependencies.sh --noconfirm
+$msys2 ${HOME}/oF/scripts/${OF_PLATFORM}/install_dependencies.sh --noconfirm
