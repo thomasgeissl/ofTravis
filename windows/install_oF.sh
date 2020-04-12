@@ -30,13 +30,13 @@ if [[ "${confirm}" == "yes" ]]; then
 		pacman -Su --confirm --needed ${pkg}
 	done
 else
-	$msys2 pacman -Su --noconfirm --needed --debug --verbose ${packages}
+	$msys2 pacman -Su --noconfirm --needed --verbose ${packages}
 fi
 
 
 # this would install gstreamer which can be used in mingw too
 #pacman -Su ${MINGW_PACKAGE_PREFIX}-gst-libav ${MINGW_PACKAGE_PREFIX}-gst-plugins-bad ${MINGW_PACKAGE_PREFIX}-gst-plugins-base ${MINGW_PACKAGE_PREFIX}-gst-plugins-good ${MINGW_PACKAGE_PREFIX}-gst-plugins-ugly ${MINGW_PACKAGE_PREFIX}-gstreamer
-
+echo ${packages}
 exit_code=$?
 if [ $exit_code != 0 ]; then
 	echo "error installing packages, there could be an error with your internet connection"
