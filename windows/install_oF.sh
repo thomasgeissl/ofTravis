@@ -30,7 +30,7 @@ if [[ "${confirm}" == "yes" ]]; then
 		pacman -Su --confirm --needed ${pkg}
 	done
 else
-	pacman -Su --noconfirm --needed --debug --verbose ${packages}
+	$msys2 pacman -Su --noconfirm --needed --debug --verbose ${packages}
 fi
 
 
