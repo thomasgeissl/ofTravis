@@ -45,7 +45,7 @@ fi
 
 
 # Update addon_config.mk files to use OpenCV 3 or 4 depending on what's installed
-addons_dir="$(readlink -f "{HOME}/oF/addons")"
+addons_dir="$(readlink -f "${HOME}/oF/addons")"
 $(pkg-config opencv4 --exists)
 exit_code=$?
 if [ $exit_code != 0 ]; then
