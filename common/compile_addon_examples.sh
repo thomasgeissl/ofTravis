@@ -10,3 +10,11 @@ for d in example*/ ; do
     make
     cd ..
 done
+
+for d in test*/ ; do
+    echo "$d"
+    cd $d
+    bash -c "$(curl -sSL https://raw.githubusercontent.com/thomasgeissl/ofPackageManager/master/scripts/ofPackageManager.sh)" install
+    make
+    cd ..
+done
